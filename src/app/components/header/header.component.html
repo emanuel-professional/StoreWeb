@@ -1,0 +1,56 @@
+<header>
+    <div class="h-section logo-img">
+        <!-- logo -->
+        <img src="../../../assets/img/flooop.png" alt="logo">
+    </div>
+
+    <div class="h-section search">
+        <!-- search -->
+        <div class="select-search">
+            <select name="cars" id="cars">
+                <option value="volvo">Todas las Categorias</option>
+                <option value="saab">Joyas</option>
+                <option value="opel">Deportes</option>
+                <option value="audi">Componentes PC</option>
+                <option value="audi">Juegos MESA</option>
+            </select>
+        </div> 
+        <div class="input-btn-search">
+            <input type="text" placeholder=" Buscar productos..">
+            <button>
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            <div class="menu-responsive">
+                <span (click)="showMenu()" class="fas fa-bars"></span>
+            </div> 
+        </div>
+    </div>
+
+    <div id="menu" class="h-section menu">
+        <!-- navbar --> 
+        <ul>
+            <li clas="items-menu">
+                <a href="#"><h3>Hola {{name}}.</h3><p>Tu cuenta</p>
+                    <ul class="submenu">
+                        <li><a href="#"></a>Mi cuenta</li>
+                        <li><a href="#"></a>Mis comentarios</li>
+                        <li><a href="#"></a>Mi lista de deseo</li>
+                    </ul> 
+                </a>
+            </li>
+            <li class="items-menu">
+                <a href="#">
+                    <h3>Pedidos</h3>
+                    <p>y cancelaciones</p>
+                </a>
+            </li>
+            <li class="center-cart items-menu">
+                <a href="#" class="cart">
+                    <h3>{{n_products}}</h3>
+                    <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+                </a>
+            </li> 
+        </ul>
+    </div>
+    
+</header>

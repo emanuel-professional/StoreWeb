@@ -1,0 +1,217 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    display: grid;
+    width: 100%;
+    background-color:#242f3e;
+    grid-template-columns: 200px 1fr 400px;  
+}
+
+.h-section img {
+    width: 120px;
+    height: 45px;
+}
+
+.logo-img{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+
+.search{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.search select{
+    height: 38px;
+    background-color: #dadada;
+}
+
+input:focus, input.form-control:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.search input{
+    width:350px;
+    height: 38px;
+    padding-left: 14px;
+}
+
+.search button{
+    width:60px;
+    height: 38px;
+    background-color: #f3a847;
+    border:none;
+    outline: none;
+    border-color:#f3a847;
+    cursor: pointer;
+}
+
+.search button:hover{
+    background-color: #a56a21;
+    transition: color .8s;
+    color:white;
+}
+
+.h-section{
+    padding:10px;
+}
+
+.menu{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu a{
+    text-decoration: none;
+    position: relative;
+    color:white;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu > ul{
+    display: flex;
+    justify-content:space-around;
+    width:100%;
+}
+
+.submenu{
+    display:none;
+    width: 170px;
+}
+
+.menu li:hover .submenu{
+   display: flex;
+   flex-direction: column;
+   position:absolute;
+   color:black;
+}
+
+.submenu li{
+    background-color:#f3a847;
+    width:100%;
+    transition: background-color 0.8s;
+    transition: color 0.8s;
+    padding:10px; 
+}
+
+.submenu{
+    z-index:1;
+}
+
+.submenu li:hover{
+    background-color: #a56a21;
+    color:white; 
+}
+
+.cart, .center-cart{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart h3{
+    color:#c17a22;
+}
+
+.menu-responsive{
+    display:none;
+}
+
+
+@media only screen and (max-width: 1220px) {
+
+    
+    header{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "logo"
+                             "search"
+                             "menu-is";
+    }
+
+    .logo-img{
+        grid-area:logo;
+    }
+
+    .sarch{
+        grid-area:search;
+    }
+
+    .select-search{
+        display: none;
+    }
+
+    .input-btn-search{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-btn-search input{
+        max-width:200px;
+    }
+
+    .input-btn-search button{
+        max-width:200px;
+    }
+
+    .menu-responsive{
+        display:flex;
+        color:white;
+        text-align: center;
+        font-size: 40px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .menu{
+       grid-area:menu-is; 
+       padding:0px;
+       display: none;
+    }
+
+    .menu ul{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:0px;
+    }
+
+    .submenu{
+        display:none !important;
+     }
+
+     .menu li:hover .submenu{
+        position:static;
+        display: flex !important;
+        justify-content: center;
+        width:100%;
+     }
+
+    .menu ul li{
+        text-align: center;
+        margin-top: 4px;
+        width: 100%;
+    }
+
+    .items-menu{
+        padding:20px;
+    }
+
+
+
+}
